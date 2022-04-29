@@ -1,2 +1,2 @@
-# Laberinto-Imitola
+# Maza Runner
  
