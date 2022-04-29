@@ -20,16 +20,13 @@ public class Enemy : MonoBehaviour
 
             float step = speed * Time.deltaTime;
             Vector2 next = BoardManager.Instance.nextStep((int)transform.position.x, (int)transform.position.y, (int)player.transform.position.x, (int)player.transform.position.y);
-            transform.position = Vector2.MoveTowards(transform.position, next, step);
-            Debug.Log((int)player.transform.position.x+" "+ (int)player.transform.position.y);
-            Debug.Log(next);
+            transform.position = Vector2.MoveTowards(transform.position, next, step);            
         }
     }
     void Move()
     {
         float step = speed * Time.deltaTime;
-        Vector2 next = BoardManager.Instance.nextStep((int)transform.position.x, (int)transform.position.y, (int)player.transform.position.x, (int)player.transform.position.y);
-        Debug.Log(next);
+        Vector2 next = BoardManager.Instance.nextStep((int)transform.position.x, (int)transform.position.y, (int)player.transform.position.x, (int)player.transform.position.y);        
         transform.position = next;
     }
 }
