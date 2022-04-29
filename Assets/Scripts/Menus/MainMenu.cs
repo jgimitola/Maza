@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("MainScene");
+        Debug.Log("LoadMainScenestoredSize" + PlayerPrefs.GetInt("size"));
     }
     public void Quit()
     {

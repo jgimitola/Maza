@@ -241,7 +241,7 @@ MonoBehaviour:
   PlayerPrefab: {fileID: 3716501857850426422, guid: a830393c876c1504ab771299e1d7e6dc, type: 3}
   EnemyPrefab: {fileID: 6733764955575452724, guid: 8a5c30e712caa924f86555b3246cd50c, type: 3}
   GoalPrefab: {fileID: 2133083236333142952, guid: 90dbd8b31f2408d48b03eb4737a6164c, type: 3}
-  ObstacleNumber: 30
+  ObstacleNumber: 5
   Width: 10
   Height: 10
   BorderPrefab: {fileID: 9162722023065898204, guid: 7e6339a78acb1ff47a0075fc9083acd7, type: 3}

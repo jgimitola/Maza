@@ -27,9 +27,6 @@ public class BoardManager : MonoBehaviour
     private void Start()
     {
         init(PlayerPrefs.GetInt("level"));
-        Width = PlayerPrefs.GetInt("size");
-        Height = PlayerPrefs.GetInt("size");
-        ObstacleNumber = PlayerPrefs.GetInt("obstacles");
     }
     public Vector2 nextStep(int x, int y, int x2, int y2)
     {
@@ -38,6 +35,10 @@ public class BoardManager : MonoBehaviour
     }
     public void init(int enemyNumber)
     {
+        Width = PlayerPrefs.GetInt("size");
+        Height = PlayerPrefs.GetInt("size");
+        ObstacleNumber = PlayerPrefs.GetInt("obstacles");
+
         padre = new GameObject("Board");
         grid = new Grid(Width, Height, 1, CellPrefab, ObstaclePrefab, ObstacleNumber, padre);
         while (PathManager.Instance.FindPath(grid, 0, 0, Width - 1, Height - 1) == null)

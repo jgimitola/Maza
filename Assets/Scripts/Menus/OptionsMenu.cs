@@ -12,12 +12,22 @@ public class OptionsMenu : MonoBehaviour
     public Text obstacletext;
     public void SetSize()
     {
-        sizetext.text = "Board Size: " + (int) ((sizeSlider.value*5)+10);
-        PlayerPrefs.SetInt("size", (int)((sizeSlider.value * 5) + 10));
+        int size = (int)((sizeSlider.value * 5) + 10);
+
+        sizetext.text = "Board Size: " + size;
+        PlayerPrefs.SetInt("size", size);
+
+        Debug.Log("size" + size);
+        Debug.Log("storedSize" + PlayerPrefs.GetInt("size"));
     }
     public void SetObstacles()
     {
-        obstacletext.text = "Number of Obstacles: " + (int)(obstacleSlider.value * Mathf.Pow(((sizeSlider.value * 4) + 8), 2));
-        PlayerPrefs.SetInt("obstacles", (int)(obstacleSlider.value * Mathf.Pow(((sizeSlider.value * 4) + 8), 2)));
+        int obstaclesNum = (int)(obstacleSlider.value * Mathf.Pow(((sizeSlider.value * 4) + 8), 2));
+
+        obstacletext.text = "Number of Obstacles: " + obstaclesNum;
+        PlayerPrefs.SetInt("obstacles", obstaclesNum);
+
+        Debug.Log("obstacles" + obstaclesNum);
+        Debug.Log("storedObstacles" + PlayerPrefs.GetInt("obstacles"));
     }
 }
