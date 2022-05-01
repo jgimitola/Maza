@@ -16,12 +16,16 @@ public class BoardManager : MonoBehaviour
     [SerializeField] private GameObject BorderPrefab;
 
     private GameObject padre;
-    private Grid grid;
+    [HideInInspector]
+    public Grid grid;
     private Player player;
 
     private void Awake()
     {
         Instance = this;
+        Width = PlayerPrefs.GetInt("size");
+        Height = PlayerPrefs.GetInt("size");
+        ObstacleNumber = PlayerPrefs.GetInt("obstacles");
     }
 
     private void Start()
